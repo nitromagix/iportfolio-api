@@ -28,6 +28,26 @@ const profileSchema = new mongoose.Schema({
     type: String,
     default: "I want more cats and dogs",
   },
+  email: {
+    type: String,
+    default: "martinprost@gmail.com",
+  },
+  phone: {
+    type: String,
+    default: "424.209.8902",
+  },
+  instagram: {
+    type: String,
+    default: "instagram",
+  },
+  linkedin: {
+    type: String,
+    default: "www.linkedin.com/in/martinprost",
+  },
+  github: {
+    type: String,
+    default: "https://github.com/nitromagix",
+  },
   education: [
     {
       type: mongoose.Schema.Types.ObjectId,

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const projectSchema = new mongoose.Schema({
-  company: {
+  name: {
     type: String,
     default: "HighTech Company",
   },
