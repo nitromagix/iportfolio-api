@@ -77,14 +77,31 @@ router.get("/", async (req, res) => {
 
 // UPDATE
 
+router.put("/:id/project/:projectId", async (req, res) => {
+  const id = req.params.id;
+  const projectId = req.params.projectId;
+  const body = req.body;
+  console.log(projectId);
+  console.log(body);
+
+  const updatedProject = await db.Project.findByIdAndUpdate(projectId, body, {
+    new: true,
+  });
+  res.status(200).send({ id });
+});
+
+// UPDATE
+
 router.put("/:id", async (req, res) => {
   const id = req.params.id;
   const body = req.body;
 
+  console.log(body);
+
   const updatedProfile = await db.Profile.findByIdAndUpdate(id, body, {
     new: true,
   });
-  res.redirect(`/profiles/${id}`);
+  res.status(200).send({ id });
 });
 
 // DELETE (PLACE)
