@@ -14,7 +14,8 @@ const profileSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    default: "Use this site to tell your unique story. All sections are customizable!",
+    default:
+      "Use this site to tell your unique story. All sections are customizable!",
   },
   about: {
     type: String,
@@ -48,18 +49,23 @@ const profileSchema = new mongoose.Schema({
     type: String,
     default: "https://github.com/nitromagix",
   },
-  education: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Education",
-    },
-  ],
-  experience: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Experience",
-    },
-  ],
+  education: {
+    type: String,
+    default: "Education",
+  },
+  education1: {
+    type: String,
+    default: "Education",
+  },
+  experience: {
+    type: String,
+    default: "Experience",
+  },
+  experience1: {
+    type: String,
+    default: "Experience",
+  },
+
   portfolio: [
     {
       type: mongoose.Schema.Types.ObjectId,
